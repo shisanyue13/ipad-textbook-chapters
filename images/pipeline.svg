@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 320" width="1080" height="320" role="img"
+     aria-label="整体流程：教材 PDF → 识别章节目录 → 按章切分 → 导出 → 传到 iPad 的笔记 App">
+  <defs>
+    <marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0 0 L7 3.2 L0 6.4 Z" fill="#333"/>
+    </marker>
+    <style>
+      .t { font-family:"Microsoft YaHei","Noto Sans SC","PingFang SC",sans-serif; fill:#1a1a1a; }
+      .d { font-family:"Microsoft YaHei","Noto Sans SC",sans-serif; fill:#5a5a5a; }
+      .k { font-family:"Microsoft YaHei","Noto Sans SC",sans-serif; fill:#111; font-weight:600; }
+      .m { font-family:Consolas,"Cascadia Mono",monospace; fill:#111; }
+      .h { font-family:Georgia,"Songti SC",serif; fill:#111; letter-spacing:.1em; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="320" rx="10" fill="#ffffff" stroke="#cfcfcf"/>
+  <text class="h" x="30" y="42" font-size="17">让课本在 iPad 上有章节 · 整体流程</text>
+  <line x1="30" y1="54" x2="140" y2="54" stroke="#111" stroke-width="2"/>
+
+  <!-- 1 教材 PDF -->
+  <rect x="30" y="82" width="170" height="180" rx="8" fill="#f7f7f7" stroke="#333"/>
+  <rect x="54" y="102" width="52" height="66" rx="2" fill="#ffffff" stroke="#333"/>
+  <rect x="62" y="110" width="22" height="3" rx="1.5" fill="#111"/>
+  <g stroke="#8a8a8a" stroke-width="1.6" stroke-linecap="round">
+    <path d="M62 120h36"/><path d="M62 127h30"/><path d="M62 134h34"/><path d="M62 141h22"/>
+  </g>
+  <text class="k" x="112" y="206" font-size="13">教材 PDF</text>
+  <text class="d" x="112" y="224" font-size="10.5">扫描件 / 电子版 / 汇编</text>
+  <text class="d" x="112" y="242" font-size="10.5">不需要 iPad 参与</text>
+
+  <path d="M204 172h34" stroke="#333" stroke-width="1.6" marker-end="url(#a1)" stroke-dasharray="5 4"/>
+
+  <!-- 2 识别 -->
+  <rect x="246" y="82" width="220" height="180" rx="8" fill="#f7f7f7" stroke="#333"/>
+  <text class="k" x="262" y="108" font-size="12">① 识别章节目录</text>
+  <g class="t" font-size="10.5">
+    <text x="262" y="132">书签 outline</text>
+    <text x="262" y="150">文本层目录页</text>
+    <text x="262" y="168">OCR 目录页</text>
+    <text x="262" y="186">固定页数兜底</text>
+  </g>
+  <path d="M262 200h150" stroke="#ccc"/>
+  <text class="d" x="262" y="220" font-size="10">从上往下试，命中就停</text>
+  <text class="d" x="262" y="238" font-size="10">页码偏移靠页脚角标投票</text>
+
+  <path d="M470 172h34" stroke="#333" stroke-width="1.6" marker-end="url(#a1)" stroke-dasharray="5 4"/>
+
+  <!-- 3 切分 -->
+  <rect x="512" y="82" width="220" height="180" rx="8" fill="#f7f7f7" stroke="#333"/>
+  <text class="k" x="528" y="108" font-size="12">② 按章切分</text>
+  <g class="m" font-size="10">
+    <text x="528" y="132">00_前置页.pdf</text>
+    <text x="528" y="150">01_第一章.pdf</text>
+    <text x="528" y="168">02_第二章.pdf</text>
+    <text x="528" y="186">91_附录.pdf</text>
+  </g>
+  <path d="M528 200h150" stroke="#ccc"/>
+  <text class="d" x="528" y="220" font-size="10">页区间重新装箱，不改像素</text>
+  <text class="d" x="528" y="238" font-size="10">章号 / 附录排 90 之后</text>
+
+  <path d="M736 172h34" stroke="#333" stroke-width="1.6" marker-end="url(#a1)" stroke-dasharray="5 4"/>
+
+  <!-- 4 导出 -->
+  <rect x="778" y="82" width="270" height="180" rx="8" fill="#f7f7f7" stroke="#333"/>
+  <text class="k" x="794" y="108" font-size="12">③ 导出（两种选一个）</text>
+  <rect x="794" y="122" width="112" height="46" rx="4" fill="#ffffff" stroke="#333"/>
+  <text class="t" x="850" y="142" font-size="10.5" text-anchor="middle">整本带目录</text>
+  <text class="d" x="850" y="158" font-size="9.5" text-anchor="middle">1 个 PDF · 18 条大纲</text>
+  <rect x="918" y="122" width="112" height="46" rx="4" fill="#ffffff" stroke="#333"/>
+  <text class="t" x="974" y="142" font-size="10.5" text-anchor="middle">ZIP 全部章节</text>
+  <text class="d" x="974" y="158" font-size="9.5" text-anchor="middle">一章一份 PDF</text>
+  <path d="M794 182h236" stroke="#ccc"/>
+  <text class="d" x="794" y="202" font-size="10">隔空投送 / iCloud / OneDrive</text>
+  <text class="k" x="794" y="228" font-size="11">→ 「文件」App → 共享</text>
+  <text class="d" x="794" y="246" font-size="10">Noteful / GoodNotes / OneNote</text>
+
+  <!-- 底部一句话 -->
+  <text class="d" x="30" y="296" font-size="10.5">
+    切分不改变页面像素，只是把同一份 PDF 按章节的页区间重新装箱；整本那份额外把书签重写成真正的章节大纲。
+  </text>
+</svg>

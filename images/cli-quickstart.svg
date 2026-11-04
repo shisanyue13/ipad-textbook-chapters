@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 340" width="940" height="340" role="img"
+     aria-label="指令版三步：安装依赖、看清章节、切分并导出整本带目录与 zip">
+  <defs>
+    <style>
+      .m { font-family:Consolas,"Cascadia Mono",monospace; }
+      .h { font-family:Georgia,"Songti SC",serif; fill:#111; letter-spacing:.1em; }
+      .d { font-family:"Microsoft YaHei","Noto Sans SC",sans-serif; fill:#5a5a5a; }
+      .t { font-family:"Microsoft YaHei","Noto Sans SC",sans-serif; fill:#1a1a1a; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="940" height="340" rx="10" fill="#ffffff" stroke="#cfcfcf"/>
+  <text class="h" x="30" y="40" font-size="17">指令版 · 三条命令跑完</text>
+  <line x1="30" y1="52" x2="120" y2="52" stroke="#111" stroke-width="2"/>
+  <text class="d" x="300" y="40" font-size="10.5">Windows / macOS · Python 3.10+</text>
+
+  <rect x="30" y="70" width="880" height="240" rx="6" fill="#f7f7f7" stroke="#333"/>
+
+  <g font-size="11">
+    <text class="m" x="48" y="96" fill="#5a5a5a"># 1) 装依赖（扫描件要自动找目录，再装 requirements-ocr.txt）</text>
+    <text class="m" x="48" y="120" fill="#111">pip install -r requirements.txt</text>
+
+    <text class="m" x="48" y="152" fill="#5a5a5a"># 2) 先看清会切成什么样，不写文件（--level 2 连小节一起切）</text>
+    <text class="m" x="48" y="176" fill="#111">python -m ipadbook split 书.pdf --dry-run</text>
+
+    <text class="m" x="48" y="208" fill="#5a5a5a"># 3) 切分，顺手导出「整本带目录」和一个 zip</text>
+    <text class="m" x="48" y="232" fill="#111">python -m ipadbook split 书.pdf --whole --zip</text>
+    <text class="m" x="48" y="256" fill="#5a5a5a">#    → 书_章节/00_… 01_… 91_… · _整本带目录.pdf · 书_章节.zip</text>
+  </g>
+
+  <text class="d" x="30" y="326" font-size="10.5">zip 传到 iPad → 「文件」App 解压 → 共享 → Noteful / GoodNotes / OneNote。</text>
+</svg>

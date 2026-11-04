@@ -1,0 +1,7 @@
+# 核心依赖（拆分 PDF 必需）
+pymupdf>=1.24
+pypdf>=4.2
+
+# 扫描版 PDF（无文本层）自动识别目录要用的 OCR 依赖已拆到 requirements-ocr.txt，
+# 不算核心依赖：装不上（老平台 / 无匹配 wheel）也不影响切分。
+#   pip install -r requirements-ocr.txt
